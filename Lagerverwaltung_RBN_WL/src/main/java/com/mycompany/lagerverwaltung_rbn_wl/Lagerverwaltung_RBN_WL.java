@@ -16,5 +16,7 @@ public class Lagerverwaltung_RBN_WL {
         System.out.println("AIIIIIIIIIIIIIIIIIIIIIIIIIIIII!!!!!!");
         System.out.println("Test_Nr_3_h_12:03_10.05.2022");
         System.out.println("TEST_NR_4_N_11:03_13.05.2022");
+        System.out.println("TEST_NR_5_N_09:49_22.05.2022");
+        System.out.println("TEST_NR_6_N_10:52_22.05.2022");
     }
 }
