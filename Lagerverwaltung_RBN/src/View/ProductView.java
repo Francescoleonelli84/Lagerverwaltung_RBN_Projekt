@@ -5,6 +5,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
+
+import Controller.ProductController.BackToHome;
+
+//import Controller.OrderController.CreateOrderListener;
+
 import javax.swing.JLabel;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
@@ -26,7 +31,10 @@ public class ProductView extends JFrame {
 	private JTextField textField_3;
 	private JTable tableItemlist;
 	private JTextField textField_4;
+	private JButton btnGoback;
+	
 
+	//all this logic should be moved to the main method in main-package
 	/**
 	 * Launch the application.
 	 */
@@ -48,7 +56,7 @@ public class ProductView extends JFrame {
 	 */
 	public ProductView() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 749, 396);
+		setBounds(100, 100, 797, 459);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(95, 158, 160));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -155,10 +163,16 @@ public class ProductView extends JFrame {
 		contentPane.add(textField_4);
 		textField_4.setColumns(10);
 		
-		JButton btnGoback = new JButton("Go Back");
+		btnGoback = new JButton("Go Back");
 		btnGoback.setBounds(588, 314, 117, 29);
 		contentPane.add(btnGoback);
 
 		
 	}
+
+	//Button for go back outside the constructor-scope
+	public void setBackToHome(ActionListener a) {
+		this.btnGoback.addActionListener(a);
+	}
+
 }
