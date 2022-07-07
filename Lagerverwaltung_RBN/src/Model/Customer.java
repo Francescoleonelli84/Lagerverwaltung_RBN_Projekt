@@ -1,41 +1,52 @@
+package Model;
+
 
 
 public class Customer {
 	
-	private String customerId;
-	private String name;
+	private int customer_id;
+	private String customer_name;
 	private String address;
 	private String email;
-	private String phoneNum;
-	private String creditRating;
+	private String phone;
+	private int credit_rating;
 	
-	public Customer() {
-		
-	}
+//	public Customer() {
+//		
+//	}
 	
-	public Customer(String customerId, String name,String address, String email, String phoneNum, String creditRating) {
-		this.customerId = customerId;
-		this.name = name;
+	public Customer(String customer_name, String email, String phone, int credit_rating, String address) {
+
+		this.customer_name = customer_name;
 		this.address = address;
 		this.email = email;
-		this.phoneNum = phoneNum;
-		this.creditRating = creditRating;
+		this.phone = phone;
+		this.credit_rating = credit_rating;
+	}
+	
+	public Customer(int customer_id, String customer_name,String email, String phone, int credit_rating, String address) {
+		this.customer_id = customer_id;
+		this.customer_name = customer_name;
+		this.address = address;
+		this.email = email;
+		this.phone = phone;
+		this.credit_rating = credit_rating;
 	}
 
-	public String getCustomerId() {
-		return customerId;
+	public int getCustomer_id() {
+		return customer_id;
 	}
 
-	public void setCustomerId(String customerId) {
-		this.customerId = customerId;
+	public void setCustomer_id(int customer_id) {
+		this.customer_id = customer_id;
 	}
 
-	public String getName() {
-		return name;
+	public String getCustomer_name() {
+		return customer_name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setCustomer_name(String customer_name) {
+		this.customer_name = customer_name;
 	}
 
 	public String getAddress() {
@@ -54,25 +65,23 @@ public class Customer {
 		this.email = email;
 	}
 
-	public String getPhoneNum() {
-		return phoneNum;
+	public String getPhone() {
+		return phone;
 	}
 
-	public void setPhoneNum(String phoneNum) {
-		this.phoneNum = phoneNum;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 
-	public String getCreditRating() {
-		return creditRating;
+	public int getCredit_rating() {
+		return credit_rating;
 	}
 
-	public void setCreditRating(String creditRating) {
-		this.creditRating = creditRating;
+	public void setCredit_rating(int credit_rating) {
+		this.credit_rating = credit_rating;
 	}
 
 	
-	
-
 	
 
 }

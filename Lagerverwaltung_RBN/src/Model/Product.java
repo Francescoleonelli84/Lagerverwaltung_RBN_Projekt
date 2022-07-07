@@ -1,17 +1,21 @@
+package Model;
 
 public class Product {
 
-
-	private String name;
-	private String productId;
+	private String product_name;
+	private int product_id;
 	private double purchase_price;
 	private double selling_price;
 	private String decription;
 	private int quantity;
-
-	public Product(String productId, String name,  double purchase_price, double selling_price, int quantity, String description) {
-		this.name = name;
-		this.productId = productId;
+	private byte[]product_picture;
+	
+//	public Product() {
+//		
+//	}
+	
+	public Product(String product_name,  double purchase_price, double selling_price, int quantity, String description) {
+		this.product_name = product_name;
 		this.purchase_price = purchase_price;
 		this.selling_price = selling_price;
 		this.quantity = quantity;
@@ -19,20 +23,30 @@ public class Product {
 		
 	}
 
-	public String getName() {
-		return name;
+	public Product(int product_id, String product_name,  double purchase_price, double selling_price, int quantity, String description, byte[]product_picture) {
+		this.product_name = product_name;
+		this.product_id = product_id;
+		this.purchase_price = purchase_price;
+		this.selling_price = selling_price;
+		this.quantity = quantity;
+		this.decription = description;
+		this.product_picture = product_picture;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public String getProduct_name() {
+		return product_name;
 	}
 
-	public String getProductId() {
-		return productId;
+	public void setProduct_name(String product_name) {
+		this.product_name = product_name;
 	}
 
-	public void setProductId(String productId) {
-		this.productId = productId;
+	public int getProduct_id() {
+		return product_id;
+	}
+
+	public void setProduct_id(int product_id) {
+		this.product_id = product_id;
 	}
 
 	public double getPurchase_price() {
@@ -65,6 +79,14 @@ public class Product {
 
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
+	}
+	
+	public byte[] getProduct_picture() {
+		return product_picture;
+	}
+
+	public void setProduct_picture(byte[] product_picture) {
+		this.product_picture = product_picture;
 	}
 
 	
